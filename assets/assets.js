@@ -81,6 +81,7 @@ export const workData = [
         title: 'Frontend project',
         description: 'Web Design',
         bgImage: '/work-1.jpg',
+        link:"https://github.com/Prathmesh-1570/weather-app"
     },
     {
         title: 'QR Code Generator',
