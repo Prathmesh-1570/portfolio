@@ -10,7 +10,7 @@ export const projects = [
     category: "Full Stack",
     description: "A full-stack grocery delivery platform...",
     technologies: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB"],
-    image: "/projects/grocery-delivery.png",
+    image: "/projects/Grocery fullstack.png",
     github: "https://github.com/Prathmesh-1570/grocery-delivery-fullstack",
     demo: "https://grocery-delivery-fullstack-62du.vercel.app/",
     featured: true,
