@@ -4,15 +4,15 @@
 
 export const projects = [
   {
-    id: "ai-website-builder",
-    number: "01",
-    name: "AI Website Builder",
-    category: "AI",
+    id: "grocery-delivery",
+    number: "02",
+    name: "Grocery Delivery Platform",
+    category: "Full Stack",
     description:
-      "An AI-powered platform that generates web application interfaces from natural-language prompts and provides an interactive preview.",
-    technologies: ["React", "JavaScript", "AI API", "Spring Boot", "MongoDB"],
-    github: "https://github.com/Prathmesh-1570/builder-ai",
-    demo: "#",
+      "A full-stack grocery delivery platform that enables customers to browse grocery products, manage shopping carts, and place orders through an intuitive online shopping experience.",
+    technologies: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+    github: "https://github.com/Prathmesh-1570/grocery-delivery-fullstack",
+    demo: "https://grocery-delivery-fullstack-62du.vercel.app/",
     featured: true,
   },
   {
