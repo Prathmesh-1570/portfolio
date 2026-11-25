@@ -5,7 +5,7 @@
 export const projects = [
   {
     id: "grocery-delivery",
-    number: "02",
+    number: "01",
     name: "Grocery Delivery Platform",
     category: "Full Stack",
     description:
