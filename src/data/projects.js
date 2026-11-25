@@ -8,9 +8,9 @@ export const projects = [
     number: "01",
     name: "Grocery Delivery Platform",
     category: "Full Stack",
-    description:
-      "A full-stack grocery delivery platform that enables customers to browse grocery products, manage shopping carts, and place orders through an intuitive online shopping experience.",
+    description: "A full-stack grocery delivery platform...",
     technologies: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+    image: "/projects/grocery-delivery.png",
     github: "https://github.com/Prathmesh-1570/grocery-delivery-fullstack",
     demo: "https://grocery-delivery-fullstack-62du.vercel.app/",
     featured: true,

@@ -4,36 +4,50 @@ import { ArrowUpRight, Github } from "lucide-react";
 // A deterministic little "mockup" gradient stand-in for a real project screenshot.
 // Swap the `image` field in projects.js for a real asset path when ready —
 // this component will use it automatically if present.
+
 function ProjectMockup({ project, featured }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-primary)] ${
-        featured ? "aspect-[16/10]" : "aspect-[16/11]"
-      }`}
+      className={`relative overflow-hidden rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-primary)] ${featured ? "aspect-[16/10]" : "aspect-[16/11]"
+        }`}
     >
-      <div
-        className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.06]"
-        style={{
-          background:
-            "radial-gradient(circle at 30% 20%, rgba(236,21,82,0.28), transparent 55%), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06), transparent 55%), #0b0b0f",
-        }}
-      />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="font-[family-name:var(--font-display)] text-white/10 font-medium text-6xl select-none">
-          {project.number}
-        </span>
-      </div>
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-      />
+      {project.image ? (
+        <img
+          src={project.image}
+          alt={`${project.name} project preview`}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+        />
+      ) : (
+        <>
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(circle at 30% 20%, rgba(236,21,82,0.28), transparent 55%), #0b0b0f",
+            }}
+          />
+
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="font-[family-name:var(--font-display)] text-white/10 font-medium text-6xl">
+              {project.number}
+            </span>
+          </div>
+
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+        </>
+      )}
     </div>
   );
 }
+
 
 export default function ProjectCard({ project, featured = false }) {
   return (
@@ -43,9 +57,8 @@ export default function ProjectCard({ project, featured = false }) {
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -6 }}
-      className={`group relative rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-secondary)] p-4 sm:p-5 transition-colors duration-300 hover:border-[color:var(--color-accent)]/50 ${
-        featured ? "md:grid md:grid-cols-2 md:gap-8 md:p-6" : ""
-      }`}
+      className={`group relative rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-secondary)] p-4 sm:p-5 transition-colors duration-300 hover:border-[color:var(--color-accent)]/50 ${featured ? "md:grid md:grid-cols-2 md:gap-8 md:p-6" : ""
+        }`}
     >
       <div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -65,9 +78,8 @@ export default function ProjectCard({ project, featured = false }) {
         </div>
 
         <h3
-          className={`font-[family-name:var(--font-display)] font-medium text-white ${
-            featured ? "text-2xl sm:text-3xl" : "text-xl"
-          }`}
+          className={`font-[family-name:var(--font-display)] font-medium text-white ${featured ? "text-2xl sm:text-3xl" : "text-xl"
+            }`}
         >
           {project.name}
         </h3>
